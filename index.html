@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DIGITAL COUNTDOWN</title>
+    <link rel="icon" href="/Dethklok_logo.webp" type="image/x-icon" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <audio id="background-audio" loop  controls hidden>
+      <source src="shadowborn.mp3" id="audio" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+   
+    <!-- Add audio control button -->
+    <button id="audio-toggle">
+      <span id="audio-icon">🔇</span>
+    </button>
+
+    <div class="container">
+      <h1 class="heading">DIGITAL COUNTDOWN TIMER BEFORE BIRTHDAY</h1>
+      <div class="date-input">
+        <input type="datetime-local" id="deadline-input" />
+        <button id="start-button">Start Countdown</button>
+        <button id="reset-button">Reset</button>
+      </div>
+      <div class="countdown">
+        <div class="time">
+          <h2 id="days">00</h2>
+          <small>days</small>
+        </div>
+        <div class="time">
+          <h2 id="hours">00</h2>
+          <small>hours</small>
+        </div>
+        <div class="time">
+          <h2 id="minutes">00</h2>
+          <small>mins</small>
+        </div>
+        <div class="time">
+          <h2 id="seconds">00</h2>
+          <small>secs</small>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

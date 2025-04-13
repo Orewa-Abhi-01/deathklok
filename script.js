@@ -17,6 +17,12 @@ audioToggle.addEventListener("click", (e) => {
     }
 });
 
+// Add keyboard shortcut for wallpaper toggle
+document.addEventListener('keydown', (e) => {
+    if (e.ctrlKey && e.shiftKey && e.key === 'W') {
+        window.wallpaper.toggle();
+    }
+});
 
 const startButton = document.getElementById("start-button");
 startButton.addEventListener("click", startCountDown);
@@ -36,7 +42,7 @@ function startCountDown() {
     const currTime = new Date().getTime();
     // const deadline = new Date("2025-04-01").getTime();
     // const deadline = new Date(deadlineInput).getTime();
-    const deadline = new Date(localStorage.getItem("deadline")||"2025-04-01").getTime();
+    const deadline = new Date(localStorage.getItem("deadline")||"2025-04-20").getTime();
     const timeLeft = deadline - currTime;
 
     if (timeLeft < 0) {
